@@ -1,7 +1,7 @@
-import './style.scss';
+import classes from './style.module.scss';
 export default function Counter() {
     
     return (
-    <div>counter</div>
+    <div className={classes.div}>counter</div>
   )
 }

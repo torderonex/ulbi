@@ -4,6 +4,7 @@ import webpack from 'webpack';
 import { buildPlugins } from './buildPlugins';
 import { buildLoaders } from './buildLoaders';
 import { buildResolvers } from './buildResolvers';
+import { buildDevServer } from "./buildDevServer";
 export function buildWebpackConfig(options : BuildOptions) : webpack.Configuration{
   return {
     mode : options.mode,
@@ -16,6 +17,8 @@ export function buildWebpackConfig(options : BuildOptions) : webpack.Configurati
         rules: buildLoaders()
       },
     resolve: buildResolvers(),
-    plugins: buildPlugins(options)
+    plugins: buildPlugins(options),
+    devtool: options.isDev ? 'inline-source-map' : undefined,
+    devServer : options.isDev ? buildDevServer(options) : undefined,
   };  
 } 

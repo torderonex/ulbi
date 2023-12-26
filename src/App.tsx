@@ -1,17 +1,24 @@
-import React, { Suspense } from 'react'
-import Counter from './components/Counter'
-import './index.scss'
+import React, { Suspense, useContext, useState } from 'react'
+import './styles/index.scss'
 import { Route, Routes } from 'react-router-dom'
-import MainPage from './pages/main-page/MainPage'
-import AboutPage from './pages/about-page/AboutPage'
 import { Link } from 'react-router-dom'
 import { AboutPageAsync } from './pages/about-page/AboutPage.async'
 import { MainPageAsync } from './pages/main-page/MainPage.async'
+import { ThemeContext } from './styles/theme/ThemeContext'
+import { Theme } from './styles/theme/ThemeContext'
+import { useTheme } from './styles/theme/useTheme'
+
 type Props = {}
 
+
+
 export default function App({}: Props) {
+ 
+  const {theme, toggleTheme} = useTheme();  
+
   return (
-    <div className='App'>
+    <div className={'app ' + theme}>
+      <button onClick={toggleTheme}>toggle theme</button>
       <Link to={'/main'}>main</Link>
       <br/>
       <Link to={'/about'}>about</Link>

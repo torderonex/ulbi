@@ -13,7 +13,7 @@ export default function AppRouter() {
                 <div className='page-wrapper'>
                   {element}
                 </div>
-              }
+              } 
                path={path}
                key={path}/>
             )  

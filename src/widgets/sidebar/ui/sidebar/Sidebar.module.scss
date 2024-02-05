@@ -10,3 +10,15 @@
 .collapsed{
     width: var(--sidebar-width-collapsed);   
 }
+
+.switches{
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.lang{
+    margin-left: 20px;
+}

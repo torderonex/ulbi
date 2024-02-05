@@ -4,19 +4,21 @@ import { classNames } from 'shared/lib/classNames/classNames'
 import {AppRouter} from './providers/routes'
 import { NavBar } from 'widgets/nav-bar';
 import { Sidebar } from 'widgets/sidebar';
-type Props = {}
+import { Suspense } from 'react';
 
-export default function App({}: Props) {
+export default function App() {
  
   const {theme} = useTheme();  
 
   return (
     <div className={classNames('app', {}, [theme])}>
-      <NavBar/>
-      <div className='page-content'>
-        <Sidebar/>
-        <AppRouter/>
-      </div>
+      <Suspense>
+        <NavBar/>
+        <div className='page-content'>
+          <Sidebar/>
+          <AppRouter/>
+        </div>
+      </Suspense>
     </div>
   )
 }

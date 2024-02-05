@@ -8,7 +8,14 @@ export default function AppRouter() {
         <Routes>
           {
             routeConfig.map(({path, element}) => 
-              <Route element={element} path={path} key={path}/>
+              <Route
+               element={
+                <div className='page-wrapper'>
+                  {element}
+                </div>
+              }
+               path={path}
+               key={path}/>
             )  
           }
         </Routes>

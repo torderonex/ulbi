@@ -3,6 +3,7 @@ import { useTheme } from './providers/ThemeProvider/lib/useTheme'
 import { classNames } from 'shared/lib/classNames/classNames'
 import {AppRouter} from './providers/routes'
 import { NavBar } from 'widgets/nav-bar';
+import { Sidebar } from 'widgets/sidebar';
 type Props = {}
 
 export default function App({}: Props) {
@@ -12,7 +13,10 @@ export default function App({}: Props) {
   return (
     <div className={classNames('app', {}, [theme])}>
       <NavBar/>
-      <AppRouter/>
+      <div className='page-content'>
+        <Sidebar/>
+        <AppRouter/>
+      </div>
     </div>
   )
 }

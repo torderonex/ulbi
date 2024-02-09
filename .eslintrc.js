@@ -4,6 +4,7 @@ module.exports = {
 		'es2021': true
 	},
 	'extends': [
+		'plugin:i18next/recommended',
 		'eslint:recommended',
 		'plugin:@typescript-eslint/recommended',
 		'plugin:react/recommended'
@@ -31,9 +32,10 @@ module.exports = {
 		'react'
 	],
 	'rules': {
-		'no-unused-vars': 'warn',
+		'no-unused-vars': 'off',
 		'@typescript-eslint/no-unused-vars': 'warn',
 		'react/react-in-jsx-scope': 'off',
+		'i18next/no-literal-string': 'warn',
 		'indent': [
 			'error',
 			'tab'

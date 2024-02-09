@@ -18,7 +18,7 @@ export default function Sidebar({className} : SidebarProps) {
 	return(
 		<div className={classNames(styles.Sidebar,{[styles.collapsed] : collapsed},[className])}>
 			<button onClick={collapseHandle}>
-            Toggle
+				{'Toggle'}
 			</button>
 			<div className={styles.switches}>
 				<ThemeSwitcher/>

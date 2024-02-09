@@ -5,6 +5,7 @@
       "module": "ESNext",
       "target": "es5",
       "jsx": "react-jsx",
+      "strictNullChecks" : true,
       "allowJs": true,
       "moduleResolution": "node",
       "allowSyntheticDefaultImports": true,

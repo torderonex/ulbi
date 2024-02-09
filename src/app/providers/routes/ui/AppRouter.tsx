@@ -1,24 +1,26 @@
 import { Suspense } from 'react';
 import { Routes,Route } from 'react-router-dom';
 import { routeConfig } from 'shared/config/route-config/routeConfig';
+import { Loader } from 'widgets/loader';
 
 export default function AppRouter() {
 	return (
-		<Suspense fallback={<div>loading</div>}>
-			<Routes>
-				{
-					routeConfig.map(({path, element}) => 
-						<Route
-							element={
-								<div className='page-wrapper'>
+		
+		<Routes>
+			{
+				routeConfig.map(({path, element}) => 
+					<Route
+						element={
+							<div className='page-wrapper'>
+								<Suspense fallback={<Loader/>}>
 									{element}
-								</div>
-							} 
-							path={path}
-							key={path}/>
-					)  
-				}
-			</Routes>
-		</Suspense>
+								</Suspense>
+							</div>
+						} 
+						path={path}
+						key={path}/>
+				)  
+			}
+		</Routes>
 	);
 }

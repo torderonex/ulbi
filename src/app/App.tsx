@@ -8,7 +8,6 @@ import './styles/index.scss';
 
 export default function App () {
 	const { theme } = useTheme();  
-
 	return (
 		<div className={classNames('app', {}, [theme])}>
 			<Suspense>

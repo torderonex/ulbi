@@ -1,4 +1,10 @@
 {
     "Language":"English",
-    "NotFound" : "Page is not found"
+    "NotFound" : "Page is not found",
+    "Main": "Main",
+    "About": "About",
+    "Reload": "Reload page",
+    "Error" : "We're sorry, looks like there was an error"
+
+
 }

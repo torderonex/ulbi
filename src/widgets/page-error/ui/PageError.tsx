@@ -12,7 +12,7 @@ export default function PageError() {
 	return (
 		<div className={styles.PageError}>
 			<h1>{t('Error')}</h1>
-			<Button onClick={reload}>{t('Reload')}</Button>
+			<Button  onClick={reload}>{t('Reload')}</Button>
 		</div>
 	);
 }

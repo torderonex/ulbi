@@ -18,7 +18,6 @@ export default function Button(props : ButtonProps) {
 		theme = ButtonTheme.CLEAR,
 		...otherProps
 	} = props;
-
 	return (
 		<button
 			className={classNames(styles.Button,{},[className, styles[theme]])}

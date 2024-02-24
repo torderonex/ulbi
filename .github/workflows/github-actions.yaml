@@ -13,7 +13,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [10.x, 12.x, 14.x]
+        node-version: [18.x]
 
     steps:
       - uses: actions/checkout@v2
@@ -26,13 +26,13 @@ jobs:
         run: npm install
 
       - name: 🔨 Build
-        run: npm build:prod
+        run: npm run build:prod
 
       - name: 🧪 Unit Test
-        run: npm test:unit
+        run: npm run test:unit
 
       - name: 🧪 Lint fix
-        run: npm lint:fix
+        run: npm run lint:fix
 
       - name: 🧪 Lint check
-        run: npm lint
+        run: npm run lint

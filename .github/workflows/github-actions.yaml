@@ -16,8 +16,8 @@ jobs:
         node-version: [10.x, 12.x, 14.x]
 
     steps:
-     - uses: actions/checkout@v2
-     - name: 🏗 Setup Node
+      - uses: actions/checkout@v2
+      - name: 🏗 Setup Node
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
@@ -30,8 +30,9 @@ jobs:
 
       - name: 🧪 Unit Test
         run: npm test:unit
+
       - name: 🧪 Lint fix
         run: npm lint:fix
+
       - name: 🧪 Lint check
         run: npm lint
-

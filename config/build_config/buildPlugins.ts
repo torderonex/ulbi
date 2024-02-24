@@ -17,8 +17,7 @@ export function buildPlugins(options : BuildOptions) : webpack.WebpackPluginInst
 		new DefinePlugin({
 			__IS_DEV__ : options.isDev
 		}),
-		new BundleAnalyzerPlugin({
-			openAnalyzer:false
-		})
-	];
+	].concat(options.isDev ? [new BundleAnalyzerPlugin({
+		openAnalyzer:false
+	})] : []);
 } 

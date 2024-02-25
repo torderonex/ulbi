@@ -32,7 +32,7 @@ export default function Button(props : ButtonProps) {
 	} = props;
 	return (
 		<button
-			className={classNames(styles.Button,{[styles.square] : square},[className, styles[theme], styles[size]])}
+			className={classNames(styles.Button,{ [styles.square] : square },[className, styles[theme], styles[size]])}
 			{...otherProps}>
 			{children}
 		</button>

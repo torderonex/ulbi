@@ -10,11 +10,11 @@ describe('classname helper tests', () => {
 	});
 
 	test('test with mods', () =>{
-		expect(classNames('class',{'test' : true, 'test2' : false },['add'])).toBe('class add test');
+		expect(classNames('class',{ 'test' : true, 'test2' : false },['add'])).toBe('class add test');
 	});
 
 	test('with mods2', () =>{
-		expect(classNames('class',{'test' : true, 'test2' : 'false', 'test3' : undefined },['add'])).toBe('class add test test2');
+		expect(classNames('class',{ 'test' : true, 'test2' : 'false', 'test3' : undefined },['add'])).toBe('class add test test2');
 	});
 
 	test('with undefined additional class ', () =>{

@@ -8,7 +8,7 @@ export default function AppRouter() {
 		
 		<Routes>
 			{
-				routeConfig.map(({path, element}) => 
+				routeConfig.map(({ path, element }) => 
 					<Route
 						element={
 							<div className='page-wrapper'>

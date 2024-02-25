@@ -8,8 +8,8 @@ interface ThemeSwitcherProps{
   className? : string,
 }
 
-export default function ThemeSwitcher({className} : ThemeSwitcherProps) {
-	const {theme,toggleTheme} = useTheme();
+export default function ThemeSwitcher({ className } : ThemeSwitcherProps) {
+	const { theme,toggleTheme } = useTheme();
 	return (
 		<Button 
 			className={classNames('',{},[className])}

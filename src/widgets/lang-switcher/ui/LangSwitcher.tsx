@@ -13,7 +13,7 @@ export enum Languages{
     EN = 'en',
 }
 
-export default function LangSwitcher({className,collapsed} : LangSwitcherProps) {
+export default function LangSwitcher({ className,collapsed } : LangSwitcherProps) {
 	const { t, i18n } = useTranslation();
 
 	function langHandle(){

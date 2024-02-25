@@ -6,7 +6,7 @@ import { LangSwitcher } from 'widgets/lang-switcher';
 import { useTranslation } from 'react-i18next';
 import { Button } from 'shared/ui';
 import { ButtonSize, ButtonTheme } from 'shared/ui/button/Button';
-import {AppLink} from 'shared/ui';
+import { AppLink } from 'shared/ui';
 import AboutSvg from 'shared/assets/icons/about.svg';
 import HomeSvg from 'shared/assets/icons/home.svg';
 import { routePath } from 'shared/config/route-config/routeConfig';
@@ -15,16 +15,16 @@ interface SidebarProps{
   className? : string,
 }
 
-export default function Sidebar({className} : SidebarProps) {
+export default function Sidebar({ className } : SidebarProps) {
 	const [collapsed, setCollapsed] = useState(false);
-	const {t} = useTranslation();
+	const { t } = useTranslation();
 	function collapseHandle(){
 		setCollapsed(prev => !prev);
 	}
 
 
 	return(
-		<div data-testid="sidebar" className={classNames(styles.Sidebar,{[styles.collapsed] : collapsed},[className])}>
+		<div data-testid="sidebar" className={classNames(styles.Sidebar,{ [styles.collapsed] : collapsed },[className])}>
 			<Button 
 				className={styles.collapseBtn}
 				data-testid="collapse-btn"

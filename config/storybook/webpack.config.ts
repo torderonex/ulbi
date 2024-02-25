@@ -1,7 +1,7 @@
 import webpack from 'webpack';
 import path from 'path';
 import { buildCssLoader } from '../build_config/loaders/buildCssLoader';
-export default function({config} : {config : webpack.Configuration}) {
+export default function({ config } : {config : webpack.Configuration}) {
 	const pth = path.resolve(__dirname,'..','..','src');
 	config.resolve.modules.push(pth);
 	config.resolve.extensions.push('.ts','.tsx');

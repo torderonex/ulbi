@@ -1,6 +1,6 @@
-import {fireEvent, screen} from '@testing-library/react';
+import { fireEvent, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import {Sidebar} from 'widgets/sidebar/';
+import { Sidebar } from 'widgets/sidebar/';
 import renderWithTranslation from 'shared/lib/tests/renderWithTranlation';
 
 describe('sidebar', () => {

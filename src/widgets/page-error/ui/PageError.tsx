@@ -3,7 +3,7 @@ import styles from './PageError.module.scss';
 import { Button } from 'shared/ui';
 
 export default function PageError() {
-	const {t} = useTranslation();
+	const { t } = useTranslation();
 	
 	const reload = () =>{
 		location.reload();

@@ -3,9 +3,9 @@
 @import "./themes/dark";
 @import "./themes/normal";
 
-body{
+.app{
     font: var(--font-m);
-    background: var(--bg-color);
+    background-color: var(--bg-color);
     color: var(--primary-color);
     min-height: 100vh;
 }

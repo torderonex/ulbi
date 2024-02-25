@@ -1,8 +1,9 @@
 import type { Preview,  } from '@storybook/react';
 import '../../src/app/styles/index.scss';
 import { RouterDecorator } from 'shared/config/storybook/RouterDecorator';
+import { AppClassDecorator } from 'shared/config/storybook/AppClassDecorator';
 const preview: Preview = {
-	decorators : [RouterDecorator],
+	decorators : [RouterDecorator, AppClassDecorator],
 	parameters: {
 		actions: { argTypesRegex: '^on[A-Z].*' },
 		controls: {
@@ -14,7 +15,7 @@ const preview: Preview = {
 		themes: {
 			default: 'normal',
 			list: [
-				{ name: 'normal', class: 'light', color: '#00aced' },
+				{ name: 'normal', class: 'normal', color: '#00aced' },
 				{ name: 'dark', class: 'dark', color: '#3b5998' }
 			],
 		},

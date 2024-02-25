@@ -1,9 +1,11 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { Button } from 'shared/ui';
+import { ButtonSize } from 'shared/ui/button/Button';
 
 interface LangSwitcherProps{
   className? : string,
+  collapsed : boolean
 }
 
 export enum Languages{
@@ -11,7 +13,7 @@ export enum Languages{
     EN = 'en',
 }
 
-export default function LangSwitcher({className} : LangSwitcherProps) {
+export default function LangSwitcher({className,collapsed} : LangSwitcherProps) {
 	const { t, i18n } = useTranslation();
 
 	function langHandle(){
@@ -21,8 +23,9 @@ export default function LangSwitcher({className} : LangSwitcherProps) {
 	return (
 		<Button 
 			className={classNames('',{},[className])}
+			size={ButtonSize.SIZE_L}
 			onClick={langHandle}>
-			{t('Language')}
+			{!collapsed ? t('Language') : t('Language').substring(0,2) }
 		</Button>
 	);
 }
